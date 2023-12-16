@@ -6,7 +6,6 @@ public class EnemyScripts : MonoBehaviour
 {
     [Header("Key Values")]
     public EnemyData stats;
-    public GameObject Base;
     //public Transform paths;
 
     [Header("Stats")]
@@ -14,7 +13,6 @@ public class EnemyScripts : MonoBehaviour
     [SerializeField] private float health;  
     [SerializeField] private float speed;
     [SerializeField] private float worth;
-    [SerializeField] private float deathPrice;
 
 
     void Start()
@@ -23,7 +21,6 @@ public class EnemyScripts : MonoBehaviour
         speed = stats.Speed;
         damage = stats.Damage;
         worth = stats.Worth;
-        deathPrice = stats.DeathPrice;
     }
 
     
@@ -47,11 +44,8 @@ public class EnemyScripts : MonoBehaviour
         
     }
 
-    void Die()
+    private void Die()
     {
-        Base.GetComponent<BaseScript>().baseMoney += deathPrice;
-        Base.GetComponent<BaseScript>().ReloadText(); 
-        Debug.Log(deathPrice);
         Destroy(gameObject);
     }
 }
