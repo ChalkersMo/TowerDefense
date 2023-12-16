@@ -51,6 +51,10 @@ public class shootScript : MonoBehaviour
             Debug.Log("rotating");
             RotateTurret(target);
         }
+        if(!target)
+        {
+            startShoot = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)

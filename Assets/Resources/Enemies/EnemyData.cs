@@ -7,7 +7,7 @@ using UnityEngine;
 public class EnemyData : ScriptableObject
 {
     [Header("Enemy Stats")]
-    [SerializeField] private float _damage, _health, _speed, _worth;
+    [SerializeField] private float _damage, _health, _speed, _worth, _deathPrice;
 
     [Header("Visuals")]
     [SerializeField] private GameObject _model;
@@ -34,6 +34,12 @@ public class EnemyData : ScriptableObject
     {
         get { return _damage; }
         set { _damage = value; }
+    }
+
+    public float DeathPrice
+    {
+        get { return _deathPrice; }
+        set { _deathPrice = value; }
     }
 
     public GameObject Model

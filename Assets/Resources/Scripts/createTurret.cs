@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class createTurret : MonoBehaviour
 {
-    public GameObject turretPrefab;
-    public string turretPlaceTag = "turretPlace"; 
+    public string turretPlaceTag = "turretPlace";
+    private setTurretScript SetTurretScript;
+
+    void Start()
+    {
+        SetTurretScript = GetComponent<setTurretScript>();
+    }
 
     void Update()
     {
@@ -19,12 +24,10 @@ public class createTurret : MonoBehaviour
                 Debug.Log(hit.collider.gameObject.tag);
                 if (hit.collider.gameObject.CompareTag(turretPlaceTag)) 
                 {
-                    Instantiate(turretPrefab, new Vector3(
-                        hit.collider.gameObject.transform.position.x, 
-                        hit.collider.gameObject.transform.position.y + 1, 
-                        hit.collider.gameObject.transform.position.z), Quaternion.identity); 
+                    SetTurretScript.CreateTurret(hit.collider.gameObject);
                 }
             }
+
         }
     }
 }

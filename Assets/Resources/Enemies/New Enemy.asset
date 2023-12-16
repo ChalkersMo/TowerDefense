@@ -16,4 +16,5 @@ MonoBehaviour:
   _health: 30
   _speed: 5
   _worth: 1
-  _model: {fileID: 1572146023126494393, guid: 448adfdc47d8411459c0b0a5d797e5c6, type: 3}
+  _deathPrice: 10
+  _model: {fileID: 2622199711563686258, guid: b2bc1b1fb846d174c9b0a086c739b552, type: 3}
