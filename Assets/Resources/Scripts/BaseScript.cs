@@ -10,6 +10,7 @@ public class BaseScript : MonoBehaviour
     public float HP = 100;
     public EnemyData stats;
     private float damage;
+    public TMP_Text healthText;
 
     [Header("Build stats")]
     public float baseMoney;
@@ -46,5 +47,6 @@ public class BaseScript : MonoBehaviour
     public void ReloadText()
     {
         moneyText.text = $"Money: " + baseMoney;
+        healthText.text = $"Health: " + HP;
     }
 }
