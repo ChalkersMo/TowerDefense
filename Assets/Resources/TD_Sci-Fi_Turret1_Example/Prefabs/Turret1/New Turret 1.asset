@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 5
   _price: 30
-  _fireRate: 0.5
+  _fireRate: 2
   _speedBullet: 100
   _turretName: Blue turret
   _canRotate: 1

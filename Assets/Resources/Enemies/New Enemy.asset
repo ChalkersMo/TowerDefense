@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: New Enemy
   m_EditorClassIdentifier: 
   _damage: 10
-  _health: 30
+  _health: 100
   _speed: 5
   _worth: 1
   _deathPrice: 10
