@@ -18,7 +18,7 @@ public class BaseScript : MonoBehaviour
 
 
     [Header("Lose values")]
-    public GameObject losePanel;
+    public loseScript LoseScript;
 
     void Start()
     {
@@ -39,8 +39,12 @@ public class BaseScript : MonoBehaviour
         ReloadText();
         if(HP <= 0)
         {
-            losePanel.SetActive(true);
-            Application.Quit();
+            LoseScript.Lose();
+        }
+
+        if (baseMoney >= LoseScript.moneyToWin)
+        {
+            LoseScript.Win();
         }
     }
 

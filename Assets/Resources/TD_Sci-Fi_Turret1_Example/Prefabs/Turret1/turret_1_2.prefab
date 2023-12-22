@@ -25396,7 +25396,7 @@ GameObject:
   - component: {fileID: -6625284439395972569}
   m_Layer: 0
   m_Name: turret_1_2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25516,9 +25516,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 5
-  m_Height: 1
+  m_Height: 5
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 3, z: 0}
 --- !u!1 &6731092374997101198
 GameObject:
   m_ObjectHideFlags: 0
