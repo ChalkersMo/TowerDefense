@@ -10,6 +10,7 @@ public class BaseScript : MonoBehaviour
     public float HP = 100;
     public EnemyData stats;
     private float damage;
+    public TMP_Text healthText;
 
     [Header("Build stats")]
     public float baseMoney;
@@ -17,7 +18,7 @@ public class BaseScript : MonoBehaviour
 
 
     [Header("Lose values")]
-    public GameObject losePanel;
+    public loseScript LoseScript;
 
     void Start()
     {
@@ -38,13 +39,18 @@ public class BaseScript : MonoBehaviour
         ReloadText();
         if(HP <= 0)
         {
-            losePanel.SetActive(true);
-            Application.Quit();
+            LoseScript.Lose();
+        }
+
+        if (baseMoney >= LoseScript.moneyToWin)
+        {
+            LoseScript.Win();
         }
     }
 
     public void ReloadText()
     {
         moneyText.text = $"Money: " + baseMoney;
+        healthText.text = $"Health: " + HP;
     }
 }

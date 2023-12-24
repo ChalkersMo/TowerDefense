@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 2
   _price: 20
-  _fireRate: 0.5
+  _fireRate: 2
   _speedBullet: 100
   _turretName: Green turret
   _canRotate: 1
